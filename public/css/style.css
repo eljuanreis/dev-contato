@@ -1,0 +1,186 @@
+/*Um backender se aventurando em CSS :(*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*O navbar ta bugado pra várias telas, arrumar isso dps*/
+#navbar{
+    background: #0D80FC;
+    padding: 20px;
+}
+.site_name{
+    margin-top: 15px;
+    margin-left: 15px;
+    color: white;
+    font-size: 35px;
+}
+.navlinks{
+    display: flex;
+    float: right;
+    margin-top: -25px;
+}
+.navlinks li{
+    margin-left: 15px;
+}
+
+.navlinks li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+#navbar ul{
+    list-style: none;
+    margin-right: 15px;
+}
+.meio_site{
+    display: flex;
+    justify-content: center;
+}
+
+/*ta meio bagunçado, dar uma atualizada dps*/
+@media (min-width:1281px) {
+    .meio_site .texto{
+        position: absolute;
+        color: white;
+        font-size: 100px;
+    }
+
+    .meio_site .subtitulo{
+        position: absolute;
+        color: white;
+        font-size: 60px;
+        margin-left: 100px;
+    }
+}
+@media (min-width:801px) and (max-width:1280px){
+    .meio_site .texto{
+        position: absolute;
+        color: white;
+        font-size: 60px;
+        flex-direction: column;
+    }
+
+    .meio_site .subtitulo{
+        position: absolute;
+        color: white;
+        font-size: 30px;
+    }   
+}
+@media (min-width: 320px) and (max-width: 800px) {
+    .meio_site .texto{
+        position: absolute;
+        color: white;
+        font-size: 30px;
+    }
+
+    .meio_site .subtitulo{
+        position: absolute;
+        color: white;
+        font-size: 15px;
+    }
+}
+
+
+.skills{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
+/*Lista de skills para telas*/
+@media (min-width:1024px) {
+    .skills .listskills{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: space-between;
+        flex-direction: row;
+    }  
+}
+
+@media (min-width:801px) and (max-width:1280px){
+    .skills .listskills{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+/* Mobile portrait */
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .skills .listskills{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
+.skillstitle{
+    font-size: 30px;
+}
+
+.contato{
+    text-align: center;
+    padding: 35px;
+
+}
+
+.butao_contato{
+    background-color: #0D80FC;
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    font-size: 25px;
+}
+
+.form_contato{
+    text-align: center;
+    padding-bottom: 15px;
+    color: white;
+    font-size: 20px;
+}
+
+.form_contato form input, .form_contato form select{
+    width: 400px;
+    height: 30px;
+}
+
+.contatogeral{
+    background-color: #2A07F2;
+}
+
+footer{
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    background: #0D80FC;
+    color: white;
+}
+
+/*ADMIN*/
+.admindiv{
+margin-bottom: 20px;
+}
+
+
+.tabledata{
+    text-align: center;
+    
+}
+.formlogin{
+    margin-left: 15px;
+}
+.formlogin input{
+    width: 400px;
+}
