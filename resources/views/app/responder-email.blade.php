@@ -1,5 +1,5 @@
 @extends('app.layout.base')
-@section('titulo', 'Painel')
+@section('titulo', 'Responder email')
 @section('conteudo')
 <div class='admindiv'>
 @if (isset($respondido))

@@ -30,8 +30,17 @@ class AdminController extends Controller
         //Não to usando a autenticacao padrão do laravel justamente pra rreinar
 
         //validacao
-        //Em breve aqui uma validação
+        $regras = [
+            'email' => 'email|exists:admins,email',
+            'senha' => 'required'
+        ];
+        $feedback = [
+            'email.email' => 'Por favor digite um email válido',
+            'email.exists' => 'Não foi encontrado esse email em nosso banco de dados',
+            'senha.required' => 'Por favor digite o campo da senha'
+        ];
 
+        $request->validate($regras, $feedback);
        
         $email = $request->get('email');
         $senha = $request->get('senha');
@@ -45,7 +54,7 @@ class AdminController extends Controller
             $_SESSION['NOME'] = $check->name; 
             return redirect()->route('admin.painel');
         }else{
-            return view('app.login', ['erro' => 'Usuário não existe']);
+            return view('app.login', ['erro' => 'Login e/ou senha incorretos']);
         }
     }
 

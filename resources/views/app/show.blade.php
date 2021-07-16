@@ -1,5 +1,5 @@
 @extends('app.layout.base')
-@section('titulo', 'Painel')
+@section('titulo', 'Visualizar - Painel')
 @section('conteudo')
 <div class='admindiv'>
 <a href='{{route('admin.logout')}}'>Sair</a>

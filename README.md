@@ -8,11 +8,12 @@
 </p>
 
 ## Ideia do projeto
-Criar um meio de contato via site (formulário) e poder responder esse email pelo próprio site, sendo notificado quando o usuário enviar uma nova mensagem - podendo responder ela pelo site - e o usuário receber a resposta via Email.
+A ideia é criar um meio de contato via site (formulário) e poder responder esse email pelo próprio site através de uma painel administrativo. Em conjunto, o administrador ser notificado no email administrativo quando o usuário enviar uma nova mensagem pelo site - podendo responder ela pelo site - No fim, o usuário receber a resposta via Email.
+
 
 ## Progresso
 20%
-Falta: Melhoria do front-end; Verificar se o usuário está floodando formulários com base no IP; Trabalhar no painel administrativo; Melhorar os Markdown Emails;.
+Falta: Melhoria do front-end; Verificar se o usuário está floodando formulários com base no IP; Trabalhar no painel administrativo; Melhorar os Markdown Emails; Corrigir paginação e melhorar o visual dela.
 
 ## Objetivo
 Elaborar uma ideia mais sólida do Framework Laravel.

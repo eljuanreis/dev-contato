@@ -8,7 +8,7 @@
         <input type='email' name='email' id='email' value='{{old("email")}}' placeholder='Digite seu e-mail'><br>
 
         @if($errors->has('email'))
-            <h4>{{$errors->first('email')}}</h4>
+            <h4 style='color: red;'>{{$errors->first('email')}}</h4>
             <hr>
         @endif
 
@@ -16,7 +16,7 @@
         <input type='password' name='senha' id='senha'  value='{{old("senha")}}' placeholder='Digite sua Senha'><br>
 
         @if($errors->has('senha'))
-            <h4>{{$errors->first('senha')}}</h4>
+            <h4 style='color: red;'>{{$errors->first('senha')}}</h4>
             <hr>
         @endif
         @if(isset($erro))
