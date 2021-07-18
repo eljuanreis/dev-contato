@@ -20,16 +20,6 @@ class ContatoController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('site.index');
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -37,6 +27,7 @@ class ContatoController extends Controller
      */
     public function store(Request $request)
     {
+
         $regras = [
             'nome' => 'required|min:3|max:40',
             'email' => 'email',
@@ -76,51 +67,5 @@ class ContatoController extends Controller
 
         //retornando sucesso pro usuário
         return view('site.sucesso', ['contato' => $contato]);
-    }
-
-    /* Os métodos abaixo não sei se vão continuar ai, mas são métodos padrão dos resources */
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

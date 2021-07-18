@@ -4,7 +4,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\LandingController;
 use App\Http\Middleware\AdminMiddleware;
-use App\Mail\NotifyAdmin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LandingController::class,'index'])->name('inicio');
 //Route::get('/login', [LandingController::class,'index']);
 
-Route::resource('contato', ContatoController::class);
+Route::get('/contato', [ContatoController::class, 'index']);
+Route::post('/contato', [ContatoController::class, 'store'])->name('contato.store')->middleware('web', 'throttle:1,1');
+
 Route::get('/login', [LandingController::class, 'mostrarLogin'])->name('admin.login');
 Route::post('/login', [AdminController::class, 'autenticar'])->name('admin.login');
 

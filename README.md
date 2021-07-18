@@ -12,7 +12,7 @@ A ideia é criar um meio de contato via site (formulário) e poder responder ess
 
 
 ## Progresso
-20%
+30%
 Falta: Melhoria do front-end; Verificar se o usuário está floodando formulários com base no IP; Trabalhar no painel administrativo; Melhorar os Markdown Emails; Corrigir paginação e melhorar o visual dela.
 
 ## Objetivo
