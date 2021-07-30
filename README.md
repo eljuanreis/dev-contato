@@ -12,7 +12,7 @@ A ideia é criar um meio de contato via site (formulário) e poder responder ess
 
 
 ## Progresso
-30%
+35%
 Falta: Melhoria do front-end; Verificar se o usuário está floodando formulários com base no IP; Trabalhar no painel administrativo; Melhorar os Markdown Emails; Corrigir paginação e melhorar o visual dela.
 
 ## Como rodar o projeto:
@@ -23,19 +23,21 @@ Falta: Melhoria do front-end; Verificar se o usuário está floodando formulári
 
 3. Faça a configuração de e-mail no arquivo .env (variáveis de ambiente)
 
-5. Acesse o projeto via terminal/console e use o: php artisan migrate
+5. Acesse o projeto via terminal/console e use o: `php artisan migrate`
 
-6. Acesse o projeto via terminal/console e use o: php artisan db:seed
+6. Acesse o projeto via terminal/console e use o: `php artisan db:seed`
 
-7. Para criar um usuários administrativo, vá no console e digite: "php artisan tinker"; logo em seguida crie um objeto de administrador: 
-$admin = new Admin();"
+7. Para criar um usuários administrativo, vá no console e digite: `php artisan tinker`
+Logo em seguida crie um objeto de administrador:
+`$admin = new Admin();`
+
 Com isso crie um usuário administrativo com a instrução:
-$admin->create(['name' => 'VALOR_NOME', 'email' => 'VALOR_EMAIL', 'password' => 'VALOR_SENHA']);
+`$admin->create(['name' => 'VALOR_NOME', 'email' => 'VALOR_EMAIL', 'password' => 'VALOR_SENHA']);`
 
 Obs: a rota para acessar o login é: http://127.0.0.1:8000/login
 Obs: os emails de contato dos usuários são enviados pro email do .env
 
-8. Após todos os passos acima, use o: php artisan serve
+7. Após todos os passos acima, use o: `php artisan serve`
 
 ## Objetivo
 Elaborar uma ideia mais sólida do Framework Laravel.
