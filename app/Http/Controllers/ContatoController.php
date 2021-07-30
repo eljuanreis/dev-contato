@@ -50,8 +50,6 @@ class ContatoController extends Controller
         $request->validate($regras, $feedback);
 
         //caso passe na validacao
-        //da pra dar uma melhorada nisso aqui pra verificar se ta floodando requisições
-        //pegar o IP e ver se já enviou mensagens nos ultimos 5m, vou adicionar isso mais pra frente
         $contato = new Contato();
         $contato->nome = $request->get('nome');
         $contato->email = $request->get('email');

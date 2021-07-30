@@ -26,16 +26,16 @@
                 <td class='tabledata'>
                     <textarea style='height: 100px; width: 100%;white-space:pre-wrap'>{{$contato->mensagem}}</textarea>
                 </td>
-                <td class='tabledata'>Responder</td>
-                <td class='tabledata'><a href=''> Visualizar </a></td>  
-                <td class='tabledata'>Excluir</td>
+                <td class='tabledata'><a href='{{route('admin.show', ['id' => $contato->id])}}'> Visualizar </a></td>  
+                <td class='tabledata'><a href='{{route('admin.responder', ['id' => $contato->id])}}'> Responder </a></td>  
+                <td class='tabledata'>
+                    <form action='{{route('admin.destroy', ['id' => $contato->id])}}'>
+                        @method('delete')
+                        <button action='submit'>Excluir</button>
+                    </form>
+                </td>
             </tr>
         </tbody>
     </table>
 </div>
-<footer>
-    <span>Copyrights, YXZ</span>
-</footer>
-</body>
-</html>
 @endsection

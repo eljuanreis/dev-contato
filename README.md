@@ -15,6 +15,28 @@ A ideia é criar um meio de contato via site (formulário) e poder responder ess
 30%
 Falta: Melhoria do front-end; Verificar se o usuário está floodando formulários com base no IP; Trabalhar no painel administrativo; Melhorar os Markdown Emails; Corrigir paginação e melhorar o visual dela.
 
+## Como rodar o projeto:
+- Requisitos: Composer/Laravel 8/PHP (>= PHP 8.0.3)
+1. Clone o repositório usando: git clone https://github.com/eljuanreis/dev-contato.git
+
+2. Crie um banco de dados e faça a configuração de acesso ao banco de dados no arquivo .env (variáveis de ambiente)
+
+3. Faça a configuração de e-mail no arquivo .env (variáveis de ambiente)
+
+5. Acesse o projeto via terminal/console e use o: php artisan migrate
+
+6. Acesse o projeto via terminal/console e use o: php artisan db:seed
+
+7. Para criar um usuários administrativo, vá no console e digite: "php artisan tinker"; logo em seguida crie um objeto de administrador: 
+$admin = new Admin();"
+Com isso crie um usuário administrativo com a instrução:
+$admin->create(['name' => 'VALOR_NOME', 'email' => 'VALOR_EMAIL', 'password' => 'VALOR_SENHA']);
+
+Obs: a rota para acessar o login é: http://127.0.0.1:8000/login
+Obs: os emails de contato dos usuários são enviados pro email do .env
+
+8. Após todos os passos acima, use o: php artisan serve
+
 ## Objetivo
 Elaborar uma ideia mais sólida do Framework Laravel.
 Obs: não usei autenticação do Laravel justamente pra treinar conhecimentos
@@ -38,36 +60,6 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
